@@ -1,0 +1,13 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: upg-loadme
+  namespace: my-eks-201
+spec:
+  selector:
+    app: upg-loadme
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8081
